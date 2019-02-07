@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # x-axis values from 0 to 2π (one period)
-x=np.linspace(0 ,2*np.pi) #np.linspace(start, stop, number within the range)
+x=np.linspace(0, 2*np.pi) #np.linspace(start, stop, number within the range)
 
 # Calculate sine and cosine values
 y=np.sin(x)
