@@ -13,18 +13,12 @@ for i in range(50):
 # Raw HTML (look at page source)
 # Use find method to locate single tag that matches a pattern in HTML (<P>)
     raw = r.text.split('<P>')
- 
-#print (raw)    
     
 # As discussed in class, the '.' is sometimes lost so extract is defined by
 # "she's" and "they fight"      
     Male = raw[1].find(" She's")
     Female = raw[1].find(" They fight")
  
-#print (Male)
-#print (Female)
-        
-    
 # Add to empty matrices    
     men.append(raw[1][:Male])
     women.append(raw[1][Male:Female])
