@@ -5,19 +5,19 @@
 import requests
 from flask import Flask
 
-men = []
-women = []
+men=[]
+women=[]
 for i in range(50):
-    r = requests.get('https://theyfightcrime.org/')
+    r=requests.get('https://theyfightcrime.org/')
 
 # Raw HTML (look at page source)
 # Use find method to locate single tag that matches a pattern in HTML (<P>)
-    raw = r.text.split('<P>')
+    raw=r.text.split('<P>')
     
 # As discussed in class, the '.' is sometimes lost so extract is defined by
 # "she's" and "they fight"      
-    Male = raw[1].find(" She's")
-    Female = raw[1].find(" They fight")
+    Male=raw[1].find(" She's")
+    Female=raw[1].find(" They fight")
  
 # Add to empty matrices    
     men.append(raw[1][:Male])
