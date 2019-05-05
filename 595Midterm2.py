@@ -36,7 +36,7 @@ def run(string):
         return ("Your input has not been accepted.")
 
 
-@app.route('/firstclick', methods=['POST'])
+@app.route('/firstclick', methods=['GET'])
 def firstclick():
     jsdata = request.form['x']
     print(jsdata)
@@ -44,7 +44,7 @@ def firstclick():
     return string
 
 
-@app.route('/secondclick', methods=['POST'])
+@app.route('/secondclick', methods=['GET'])
 def secondclick():
     string = request.form['x']
     option = request.form['y']
@@ -124,7 +124,7 @@ def start(string, userchoiceless7):
         return json.dumps(resp)
 
 
-@app.route('/thirdclick', methods=['POST'])
+@app.route('/thirdclick', methods=['GET'])
 def thirdclick():
     blob = request.form['x']
     type = request.form['y']
